@@ -38,6 +38,16 @@ public class AddressBook {
             System.out.println("⚠ Contact not found.");
         }
     }
+    public void displayContacts() {
+        if (contacts.isEmpty()) {
+            System.out.println("No contacts found.");
+        } else {
+            for (Contact c : contacts) {
+                System.out.println(c);
+            }
+ }
+}
+
 
 }
 
