@@ -30,6 +30,15 @@ public class AddressBook {
         }
         System.out.println("⚠ Contact not found.");
     }
+    public void deleteContact(String firstName) {
+        boolean removed = contacts.removeIf(contact -> contact.getFirstName().equalsIgnoreCase(firstName));
+        if (removed) {
+            System.out.println("✅ Contact deleted successfully.");
+        } else {
+            System.out.println("⚠ Contact not found.");
+        }
+    }
+
 }
 
 
