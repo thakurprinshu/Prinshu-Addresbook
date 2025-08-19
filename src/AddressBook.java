@@ -11,7 +11,7 @@ public class AddressBook {
                 System.out.println("⚠ Contact with the name "
                         + contact.getFirstName() + " "
                         + contact.getLastName() + " already exists!");
-                return; // don't add duplicate
+                return;
             }
         }
         contacts.add(contact);
