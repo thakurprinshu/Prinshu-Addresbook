@@ -18,6 +18,7 @@ public class AddressBook {
         System.out.println("✅ Contact added successfully!");
     }
 
+
     public void editContact(String firstName, Scanner sc) {
         for (Contact contact : contacts) {
             if (contact.getFirstName().equalsIgnoreCase(firstName)) {
@@ -30,6 +31,8 @@ public class AddressBook {
         }
         System.out.println("⚠ Contact not found.");
     }
+
+
     public void deleteContact(String firstName) {
         boolean removed = contacts.removeIf(contact -> contact.getFirstName().equalsIgnoreCase(firstName));
         if (removed) {
@@ -38,6 +41,8 @@ public class AddressBook {
             System.out.println("⚠ Contact not found.");
         }
     }
+
+
     public void displayContacts() {
         if (contacts.isEmpty()) {
             System.out.println("No contacts found.");
@@ -45,10 +50,8 @@ public class AddressBook {
             for (Contact c : contacts) {
                 System.out.println(c);
             }
- }
+        }
 }
-
-
 }
 
 
